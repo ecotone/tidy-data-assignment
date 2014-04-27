@@ -1,9 +1,24 @@
-##
-##  CodeBook.md
-## 
+### CodeBook for Coursera's  'Getting and Cleaning Data' class assignment
+
+This document contains the listing of the variables included in the tidy dataset.
+As indicated in the README.md file for this repository, the course's tidy dataset is
+based on a subset of 66 variable from the 561 variables included in the original dataset, however it
+also also differs from the original by having observervation from the 'training' and
+'test' subsets merged together, and with the addition of the Activity and the SubjectID 
+columns.
+
+The tidy dataset can be loaded into a data.frame with either a "Long" name  or
+a "Short name" of the variables.  See the load_tidy.R for the R snippet that can
+be used to produce either of these column names.  In all cases the data *values* are identical.
+
+The list of variables is as follow, the name in the original dataset is also included for reference.
+Note that the short name includes a integer value which is column number in the original dataset.
+
 
 |OrigName|LongName|ShortName|
 |--------|--------|---------|
+| n/a |Activity|Activity|
+| n/a |SubjectID|SubjectID|
 |tBodyAcc-mean()-X|tBodyAcc.mean.X|tB_1|
 |tBodyAcc-mean()-Y|tBodyAcc.mean.Y|tB_2|
 |tBodyAcc-mean()-Z|tBodyAcc.mean.Z|tB_3|
@@ -70,3 +85,46 @@
 |fBodyBodyGyroMag-std()|fBodyBodyGyroMag.std|fB_530|
 |fBodyBodyGyroJerkMag-mean()|fBodyBodyGyroJerkMag.mean|fB_542|
 |fBodyBodyGyroJerkMag-std()|fBodyBodyGyroJerkMag.std|fB_543|
+
+
+For convenience, the following hints about the "Original" and/or "Long" variables names is provided below.
+Please refer to the documentation of the Original study by Jorge L. Reyes-Ortiz et al. in particular the
+Read.me file of the original data set, found within the following archive
+<http://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip>
+or
+<https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip>
+The original site/study also provides insight about how the data was initially collected and processed.
+
+### Variable  Naming conventions
+
+* prefix 'f' indicates *frequency* domain signals
+* prefix 't' to denote *time* based signals
+* Acc   = accelerometer
+* Gyro  = gyroscope
+* Body  = body [of the Subject], ain BodyAcc etc. (as opposed to GravityAcc...)
+* Gravity = gravity   also abbreviated 'Grav' in the "Long" names (except in 'gravityMean')
+* Jerk    = jerk signal
+* Mag     = magnitude
+* angle   = angle (typically between to vectors)
+* XYZ     = qualifies a composite signal in all 3 Dimensions
+* X, Y or Z = qualities a signal in a given dimension.
+
+Several computations are applied to the values.  Here's a list of them
+
+* mean(): Mean value
+* std(): Standard deviation
+* mad(): Median absolute deviation 
+* max(): Largest value in array
+* min(): Smallest value in array
+* sma(): Signal magnitude area
+* energy(): Energy measure. Sum of the squares divided by the number of values. 
+* iqr(): Interquartile range 
+* entropy(): Signal entropy
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+* correlation(): correlation coefficient between two signals
+* maxInds(): index of the frequency component with largest magnitude
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+* skewness(): skewness of the frequency domain signal 
+* kurtosis(): kurtosis of the frequency domain signal 
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+* angle(): Angle between to vectors.
