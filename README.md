@@ -20,6 +20,7 @@ See the above site for details on the genesis of the **original data**.  Essenti
 * ...combining the activity code, and the subject id with the variables' table
 * ...re-labeling the activity values with a descriptive text rather than the original 1-thru-6 code.
 * ...subsetting, by taking only the columns which represent either a computed average or standard deviation value in the original dataset (retained 66 variables from the original's 561 variables).
+* ...aggregating the data on the basis of Activity + SubjectId grouping, using the arithmetic mean function
 * ...saving the new dataset as a CSV file for ease of import (fixed width format akin to that of the original wasn't applicable anymore owing to the headers). 
 
 ### Files found in this repo

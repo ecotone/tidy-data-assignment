@@ -3,9 +3,13 @@
 This document contains the listing of the variables included in the tidy dataset.
 As indicated in the README.md file for this repository, the course's tidy dataset is
 based on a subset of 66 variables from the 561 variables included in the original dataset, however it
-also differs from the original by having observervation from the 'training' and
-'test' subsets merged together, and with the addition of the Activity and the SubjectID 
-columns.
+also differs from the original in the following fashions:
+
+ * data from the 'training' and 'test' subsets merged together
+ * an Activity and the SubjectID was added
+ * several columns were excluded, we only retained the 66 columns which name had a reference to a mean() or a std() function.
+ * The data was then averaged on the basis of Activity and SubjectId groups
+
 
 The tidy dataset can be loaded into a data.frame with either a "Long" name  or
 a "Short name" of the variables.  See the load_tidy.R for the R snippets that can
