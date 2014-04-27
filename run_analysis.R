@@ -11,8 +11,6 @@
 ## date  : 4/26/2014
 ##
 
-setwd("T:/UCI HAR Dataset")
-
 NB_OF_X_FEATURES <- 561
 
 
@@ -161,4 +159,8 @@ write.table(rbind(names.short, names.long, names.orig), file="AltColNames.txt", 
 print("Completed tidy dataset production. The new dataset is found in 'tidy.txt'")
 print("See 'README.md' and 'CodeBook.md' for more details.")
 
-
+## ***** logic to produce the Markdown snippet for the CodeBook *****
+head(featuresDf)
+feats <- cbind("", featuresDf[featuresDf$InNewDataSet, c("OrigName", "LongName", "ShortName")], "")
+write.table(feats,
+            "DataCatalog.md", quote=FALSE, sep="|", row.names=FALSE)
