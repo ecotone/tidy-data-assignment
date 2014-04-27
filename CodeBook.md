@@ -2,13 +2,13 @@
 
 This document contains the listing of the variables included in the tidy dataset.
 As indicated in the README.md file for this repository, the course's tidy dataset is
-based on a subset of 66 variable from the 561 variables included in the original dataset, however it
-also also differs from the original by having observervation from the 'training' and
+based on a subset of 66 variables from the 561 variables included in the original dataset, however it
+also differs from the original by having observervation from the 'training' and
 'test' subsets merged together, and with the addition of the Activity and the SubjectID 
 columns.
 
 The tidy dataset can be loaded into a data.frame with either a "Long" name  or
-a "Short name" of the variables.  See the load_tidy.R for the R snippet that can
+a "Short name" of the variables.  See the load_tidy.R for the R snippets that can
 be used to produce either of these column names.  In all cases the data *values* are identical.
 
 The list of variables is as follow, the name in the original dataset is also included for reference.
@@ -85,7 +85,8 @@ Note that the short name includes a integer value which is column number in the 
 |fBodyBodyGyroMag-std()|fBodyBodyGyroMag.std|fB_530|
 |fBodyBodyGyroJerkMag-mean()|fBodyBodyGyroJerkMag.mean|fB_542|
 |fBodyBodyGyroJerkMag-std()|fBodyBodyGyroJerkMag.std|fB_543|
-
+  
+  
 
 For convenience, the following hints about the "Original" and/or "Long" variables names is provided below.
 Please refer to the documentation of the Original study by Jorge L. Reyes-Ortiz et al. in particular the
