@@ -19,8 +19,8 @@ See the above site for details on the genesis of the **original data**.  Essenti
 * ...providing a header for each of the data columns, within the new data file.  (Indeed provided two headers: one with "long names" very similar to the names used in the original study, and one with short names referencing the column number in the original dataset)
 * ...combining the activity code, and the subject id with the variables' table
 * ...re-labeling the activity values with a descriptive text rather than the original 1-thru-6 code.
-* ...subsetting, by only taking only the columns which represent either a computed average or standard deviation value in the original dataset (retained 66 variables from the original's 561 variables).
-* ...saving the new dataset as a CSV file for ease of import (fixed width format akin to that of the original wasn't applicable anymore owing to the headers. 
+* ...subsetting, by taking only the columns which represent either a computed average or standard deviation value in the original dataset (retained 66 variables from the original's 561 variables).
+* ...saving the new dataset as a CSV file for ease of import (fixed width format akin to that of the original wasn't applicable anymore owing to the headers). 
 
 ### Files found in this repo
 |File name|Description|
@@ -35,9 +35,9 @@ See the above site for details on the genesis of the **original data**.  Essenti
 |README.md| The very file you are reading|
 
 ### Alternative column names
-The names of the variables in the original data are rather self descriptive but also rather long. Depending on intentded use it may be useful to refer to these variable using different names:
+The names of the variables in the original data are generally self descriptive but also rather long. Depending on intentded use it may be useful to refer to these variable using different names:
 
- * a Short name, mostly based on the original file column number.
+ * a Short name, mostly based on the column number in the original dataset.
  * a Long name, derived from the original column name, modified to be R-syntax compatible (for e.g. the original names included parenthesis characters which are not allowed in data.frame's colnames.)
  * the original file name.
  
